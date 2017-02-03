@@ -1,8 +1,8 @@
 import AppKit
 import Foundation
 
-if let image = NSImage(pasteboard: .general()),
-    let data = image.tiffRepresentation {
+let pasteboard = NSPasteboard.general()
+if let data = pasteboard.data(forType: NSPasteboardTypePNG) {
   let stdout = FileHandle.standardOutput
   stdout.write(data)
 } else {
