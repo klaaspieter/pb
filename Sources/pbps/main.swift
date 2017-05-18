@@ -5,6 +5,9 @@ let pasteboard = NSPasteboard.general()
 if let data = pasteboard.data(forType: NSPasteboardTypePNG) {
   let stdout = FileHandle.standardOutput
   stdout.write(data)
+} else if let data = pasteboard.data(forType: kUTTypeGIF as String) {
+  let stdout = FileHandle.standardOutput
+  stdout.write(data)
 } else {
   let process = Process()
   process.launchPath = "/usr/bin/pbpaste"
