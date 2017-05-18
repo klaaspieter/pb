@@ -1,6 +1,13 @@
 # pb
 
-Versions of `pbpaste` and `pbcopy` that can handle image representations
+Versions of `pbpaste` and `pbcopy` that handles arbitrary data
+
+## Install
+
+```sh
+brew tap klaaspieter/homebrew-formula
+brew install pb
+```
 
 ## Usage
 
